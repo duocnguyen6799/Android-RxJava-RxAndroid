@@ -26,3 +26,6 @@ Nội dung cần nghiên cứu thêm với các từ khóa sau:
 - Single, just,...
 - callable
 - map, filter
+# References
+[https://viblo.asia/p/rxjava-rxandroid-phan-1-nhung-khai-niem-co-ban-YWOZr2rPZQ0#_schedulersio-5]()
+[https://viblo.asia/p/rxjava-rxandroid-phan-2-examples-use-rx-in-android-gDVK22L2KLj#_2-buoc-co-ban-nhat-1]()
