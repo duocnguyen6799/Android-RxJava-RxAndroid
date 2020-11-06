@@ -21,7 +21,10 @@ do đó cùng lúc thực thi được nhiều khối mã.
 		* Nó cung cấp quyền truy cập đến Main Thread/UI Thread.
 - SubscribeOn: quyết định request sẽ được thực hiện trên thread nào. chỉ 1 subo, nhiều thì lấy cái đầu
 - ObserveOn: quyết định observer trong subsribe sẽ được thực hiện ở task nào.
-
+## Disposable:
+    - Được dùng để loại bỏ đăng kí (subsription) khi Observer không còn lắng nghe Observable nữa.
+    - Vì khi Activity hay Fragment bị destroy thì Observer đăng kí vẫn sống và nó cố gắng thay đổi UI trên Activity/Fragment đã destroy
+    => trường hợp này dẫn đến leak(rò rỉ) bộ nhớ.
 Nội dung cần nghiên cứu thêm với các từ khóa sau:
 - Single, just,...
 - callable
