@@ -32,3 +32,18 @@ Nội dung cần nghiên cứu thêm với các từ khóa sau:
 # References
 [https://viblo.asia/p/rxjava-rxandroid-phan-1-nhung-khai-niem-co-ban-YWOZr2rPZQ0#_schedulersio-5]()
 [https://viblo.asia/p/rxjava-rxandroid-phan-2-examples-use-rx-in-android-gDVK22L2KLj#_2-buoc-co-ban-nhat-1]()
+
+*Chúng ta thường quen với kiểu lập trình tuần tự(được gọi là lập trình đồng bộ). Giờ đây tư duy lập trình hướng sự kiện hay
+bất đồng bộ đã được sử dụng trong lập trình Android.
+*Về cơ bản, RxJava sẽ follow theo Observer Pattern. Khi lập trình được chia làm 2 phần:
+- 1 là phần tạo sự kiện như click button sẽ tạo request rest API
+- phần còn lại là lắng nghe và phản hồi 1 cách bất đồng bộ với sự kiện cụ thế nào đó như update view, xử lí kết quả trả về...
+RxJava có phiên bản đặc biệt cho Android là RxAndroid. Về triết lý cơ bản thì giống nhau, RxAndroid sẽ được thêm mở rộng và hỗ trợ thêm
+api cho Android.
+
+# Lí do nên dùng RxAndroid thay cho Async Task?
+Async Task có nhiệm vụ là thực hiện các tác vụ nặng dưới background, sau khi hoàn thành sẽ cập nhật lên UI Thread.
+Lí do:
+- error: giúp bắt lỗi
+- code: ngắn gọn hơn, với async task khi xử lí multithread thì việc quản lí async task là 1 ác mộng
+- không cần dùng đến Context. AsyncTask sẽ gặp lỗi memory leak nếu tạo inner class và truyền vào context không đúng cách.
