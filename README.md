@@ -47,3 +47,6 @@ Lí do:
 - error: giúp bắt lỗi
 - code: ngắn gọn hơn, với async task khi xử lí multithread thì việc quản lí async task là 1 ác mộng
 - không cần dùng đến Context. AsyncTask sẽ gặp lỗi memory leak nếu tạo inner class và truyền vào context không đúng cách.
+# Toán tử
+- filter(): lọc các phần tử phù hợp với điều kiện truyền vào
+- map(): biến đổi trực tiếp lên từng phần tử được phát ra từ Observable.
